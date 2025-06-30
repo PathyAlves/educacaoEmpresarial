@@ -1,285 +1,307 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Flex", sans-serif;
 }
 
 body {
-    line-height: 1.6;
-    background-color: hwb(220 87% 5%);
+  line-height: 1.6;
+  background-color: hwb(220 87% 5%);
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+.logo { 
+  font-family: "UoqMunThenKhung", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 /* Estilos para o Menu Responsivo (Hamburger) */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 50px;
-    background-color: #333;
-    color: white;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background-color: #333;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .nav-links {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 .nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #007bff;
+  color: #007bff;
 }
 
 .hamburger {
-    display: none; /* Escondido por padrão em telas maiores */
-    flex-direction: column;
-    cursor: pointer;
-    gap: 4px; /* Espaçamento entre as barras */
+  display: none; /* Escondido por padrão em telas maiores */
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px; /* Espaçamento entre as barras */
 }
 
-.hamburger.bar { /* Adicionei.bar aqui para ser mais específico */
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    transition: all 0.3s ease;
+.hamburger.bar {
+  /* Adicionei.bar aqui para ser mais específico */
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease;
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 6rem 2rem 2rem 2rem;   
-    background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem 6rem 2rem;
+  background-color: #fff;
 }
 
 .div-header {
-    width: 50%;
-    padding: 1rem;
+  width: 50%;
+  padding: 1rem;
 }
 
 .div-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
+.div-header h2{
+  text-align: justify;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+ }
+
 .imagem-header {
-    width: 50%;
-    text-align: center;
+  width: 50%;
+  text-align: center;
 }
 
 .imagem-header img {
-    width: 80%;
-    height: auto;
-    border-radius: 8px;
+  width: 80%;
+  height: auto;
+  border-radius: 8px;
 }
 
 .sobre-mim {
-    padding: 4rem 2rem;
-    background-color: #eee;
-    text-align: center;
+  padding: 4rem 2rem;
+  background-color: #eee;
+  text-align: center;
 }
 
 .sobre-mim h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
-.sobre-mim img{
-    width: 40%;
-    height: auto;
-    border-radius: 8px;
+.sobre-mim img {
+  width: 40%;
+  height: auto;
+  border-radius: 8px;
 }
 
 .sobre-mim p {
-    max-width: 700px;
-    margin: 0 auto;
+  text-align: justify;
+}
+
+.sobre-mim p {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.imagem-sobre {
+  margin-top: 3rem;
 }
 
 .cursos {
-    padding: 4rem 2rem;
-    background-color: #fff;
-    text-align: center;
+  padding: 4rem 2rem;
+  background-color: #fff;
+  text-align: center;
 }
 
 .container-cursos {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
 .div-cursos {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 1rem;
-    width: 250px;
-    background-color: #f0f0f0;
-    transition: transform 0.2s ease-in-out;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 250px;
+  background-color: #f0f0f0;
+  transition: transform 0.2s ease-in-out;
 }
 
 .div-cursos:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .div-cursos img {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-    margin-top: 0.5rem;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-top: 0.5rem;
 }
 
 .contato {
-    padding: 4rem 2rem;
-    background-color: #ddd;
-    text-align: center;
+  padding: 4rem 2rem;
+  background-color: #ddd;
+  text-align: center;
 }
 
 .footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 2rem;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 2rem;
 }
 
 /* Estilos para o Formulário de Contato */
 .contact-form {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 30px auto; /* Centraliza o formulário */
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 30px auto; /* Centraliza o formulário */
 }
 
 .form-group {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #333;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
 }
 
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group textarea {
-    width: calc(100% - 20px); /* Ajusta a largura considerando o padding */
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 1em;
-    box-sizing: border-box; /* Inclui padding e borda na largura total */
+  width: calc(100% - 20px); /* Ajusta a largura considerando o padding */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+  box-sizing: border-box; /* Inclui padding e borda na largura total */
 }
 
 .form-group textarea {
-    resize: vertical; /* Permite redimensionar verticalmente */
+  resize: vertical; /* Permite redimensionar verticalmente */
 }
 
 .contact-form button {
-    background-color: #007bff;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.1em;
-    transition: background-color 0.3s ease;
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease;
 }
 
 .contact-form button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 .error-message {
-    color: red;
-    font-size: 0.9em;
-    margin-top: 5px;
+  color: red;
+  font-size: 0.9em;
+  margin-top: 5px;
 }
 
 .success-message {
-    color: green;
-    font-size: 1em;
-    margin-top: 15px;
-    padding: 10px;
-    background-color: #e6ffe6;
-    border: 1px solid #c6f6c6;
-    border-radius: 4px;
-    display: none; /* Escondido por padrão, mostrado via JS */
+  color: green;
+  font-size: 1em;
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #e6ffe6;
+  border: 1px solid #c6f6c6;
+  border-radius: 4px;
+  display: none; /* Escondido por padrão, mostrado via JS */
 }
 
 /* Media Query para telas menores (mobile) */
 @media (max-width: 768px) {
   .navbar {
-        padding: 15px 20px;
-    }
+    padding: 15px 20px;
+  }
 
   .nav-links {
-        display: none; /* Esconde os links por padrão em mobile */
-        flex-direction: column;
-        width: 100%;
-        background-color: #444; /* Fundo para o menu aberto */
-        position: absolute;
-        top: 60px; /* Ajuste conforme a altura da sua navbar */
-        left: 0;
-        padding: 10px 0;
-        text-align: center;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    }
+    display: none; /* Esconde os links por padrão em mobile */
+    flex-direction: column;
+    width: 100%;
+    background-color: #444; /* Fundo para o menu aberto */
+    position: absolute;
+    top: 60px; /* Ajuste conforme a altura da sua navbar */
+    left: 0;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
 
   .nav-links.active {
-        display: flex; /* Mostra os links quando a classe 'active' está presente */
-    }
+    display: flex; /* Mostra os links quando a classe 'active' está presente */
+  }
 
   .nav-links a {
-        padding: 10px 0;
-        width: 100%;
-        border-bottom: 1px solid #555; /* Separador para os links */
-    }
+    padding: 10px 0;
+    width: 100%;
+    border-bottom: 1px solid #555; /* Separador para os links */
+  }
 
   .nav-links a:last-child {
-        border-bottom: none;
-    }
+    border-bottom: none;
+  }
 
   .hamburger {
-        display: flex; /* Mostra o ícone hambúrguer em mobile */
-    }
+    display: flex; /* Mostra o ícone hambúrguer em mobile */
+  }
 
-    /* Animação do ícone hambúrguer */
-  .hamburger.active.bar:nth-child(1) { /* Adicionei.bar aqui */
-        transform: translateY(7px) rotate(45deg);
-    }
+  /* Animação do ícone hambúrguer */
+  .hamburger.active.bar:nth-child(1) {
+    /* Adicionei.bar aqui */
+    transform: translateY(7px) rotate(45deg);
+  }
 
-  .hamburger.active.bar:nth-child(2) { /* Adicionei.bar aqui */
-        opacity: 0;
-    }
+  .hamburger.active.bar:nth-child(2) {
+    /* Adicionei.bar aqui */
+    opacity: 0;
+  }
 
-  .hamburger.active.bar:nth-child(3) { /* Adicionei.bar aqui */
-        transform: translateY(-7px) rotate(-45deg);
-    }
+  .hamburger.active.bar:nth-child(3) {
+    /* Adicionei.bar aqui */
+    transform: translateY(-7px) rotate(-45deg);
+  }
 }
 
 /* Estilos gerais (mantenha os seus estilos existentes e adicione estes) */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /*... (seus outros estilos existentes devem vir aqui ou antes destes novos)... */
