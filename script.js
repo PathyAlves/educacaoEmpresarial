@@ -68,9 +68,9 @@ if (contactForm) {
   });
 
   function isValidEmail(email) {
-    const re = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
-    return re.test(email);
-  }
+  const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,}$/i;
+  return re.test(email);
+}
 }
 
 // =============== Menu Hamburguer Responsivo ===============
