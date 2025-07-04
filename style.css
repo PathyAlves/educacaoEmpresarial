@@ -18,7 +18,7 @@
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;
-  padding: 0 1rem; 
+  padding: 0 1rem;
 }
 
 /* Estilos gerais (mantenha os seus estilos existentes e adicione estes) */
@@ -219,15 +219,13 @@ body {
   margin-top: 2rem;
 }
 
-
-
 .contato {
   padding: 4rem 2rem;
   /* background-color: #ddd; */
   text-align: center;
 }
 
-.contato h2{
+.contato h2 {
   color: var(--form-buttom-hover);
   font-size: 2.5rem;
   font-family: "Roboto Flex", sans-serif;
@@ -293,7 +291,7 @@ body {
 }
 
 .contact-form button:hover {
-  background-color: var(--form-buttom-hover)
+  background-color: var(--form-buttom-hover);
 }
 
 .error-message {
@@ -315,103 +313,123 @@ body {
 
 /* Media Query para telas menores (mobile) */
 @media (max-width: 768px) {
-  .logo {
-    font-size: 1.3rem;
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    position: relative;
   }
 
+  .navbar .logo{
+    font-size: 1.5rem;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    transition: all 0.3s ease;
+  }
+
+  .nav-links {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin: 0;                   /* Remove qualquer margem */
+  padding: 1rem 0;
+  width: 200px;                /* Ou ajuste conforme necessário */
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(4px);
+  border-radius: 0 0 0 8px;
+  box-shadow: -2px 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  font-size: 1.3rem;
+}
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 0.8rem 1.5rem;
+    color: var(--text-color);
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    transition: background 0.3s ease;
+  }
+
+  .nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
 
   .headline {
-    min-height: calc(100vh - 150px); /* altura visível menos header/footer */
-    display: flex;
+    flex-direction: column;
     align-items: center;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  .div-headline h1 {
+    font-size: 1.3rem; /* ou 1.4rem, se quiser um pouco maior */
+    line-height: 1.4;
+  }
+
+  .div-headline h2 {
+    font-size: 1rem;
+    font-weight: normal;
   }
 
   .div-headline,
   .imagem-headline {
     width: 100%;
-    text-align: center;
+    padding: 1rem;
   }
 
-  .div-headline h1,
-  .div-headline h2 {
-    text-align: center;
-  }
-
-  .div-headline h1 {
-    font-size: 1.5rem;
-  }
-
-  .div-headline h2 {
-    font-size: 1rem;
-  }
-
-  .div-headline p {
+  .div-headline p,
+  .div-sobre p {
     font-size: 0.95rem;
+  }
+
+  .div-sobre {
+    width: 100%;
+    margin-left: 0;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .imagem-sobre img,
+  .imagem-headline img {
+    width: 90%;
+    max-width: 500px;
+    height: auto;
   }
 
   .div-cursos {
     width: 90%;
   }
 
-  .imagem-headline img {
-    width: 90%;
-  }
-
-  .sobre-mim img {
-    width: 90%;
-  }
-  .navbar {
-    padding: 15px 20px;
-  }
-
-  .nav-links {
-    display: none; /* Esconde os links por padrão em mobile */
-    flex-direction: column;
-    width: 100%;
-    background-color: #444; /* Fundo para o menu aberto */
-    position: absolute;
-    top: 60px; /* Ajuste conforme a altura da sua navbar */
-    left: 0;
-    padding: 10px 0;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  }
-
-  .nav-links.active {
-    display: flex; /* Mostra os links quando a classe 'active' está presente */
-  }
-
-  .nav-links a {
-    padding: 10px 0;
-    width: 100%;
-    border-bottom: 1px solid #555; /* Separador para os links */
-  }
-
-  .nav-links a:last-child {
-    border-bottom: none;
-  }
-
-  .hamburger {
-    display: flex; /* Mostra o ícone hambúrguer em mobile */
-  }
-
-  /* Animação do ícone hambúrguer */
-  .hamburger.active.bar:nth-child(1) {
-    /* Adicionei.bar aqui */
-    transform: translateY(7px) rotate(45deg);
-  }
-
-  .hamburger.active.bar:nth-child(2) {
-    /* Adicionei.bar aqui */
-    opacity: 0;
-  }
-
-  .hamburger.active.bar:nth-child(3) {
-    /* Adicionei.bar aqui */
-    transform: translateY(-7px) rotate(-45deg);
-  }
-
   .footer {
     padding: 1rem;
+  }
+}
+
+/* ===============================
+   MEDIA QUERY - DESKTOP HD
+   =============================== */
+@media (min-width: 1200px) {
+  .contato h2 {
+    font-size: 3rem;
   }
 }
